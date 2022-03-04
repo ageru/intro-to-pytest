@@ -54,3 +54,12 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/intro-py:${{ env.APP_VERSION }}
+      - 
+        name: Run PyTest
+        run: pytest
+      - 
+        name: Récupération des logs
+        uses: actions/upload-artifacts@v3
+        with:
+          name: mon-reports.txt
+          path: ./reports.txt
