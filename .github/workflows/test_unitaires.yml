@@ -58,8 +58,8 @@ jobs:
         name: Installation PyTest
         run: pip install -r requirements.txt
       - 
-        name: Run PyTest
-        run: pytest
+        name: Lancement du test avec récupération du stdout
+        run: pytest 1> `date +"%Y%m%d"`rapport.txt
       # - 
       #   name: Récupération des logs
       #   uses: actions/upload-artifacts@v3
