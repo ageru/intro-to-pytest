@@ -62,7 +62,7 @@ jobs:
         run: pytest 1> `date +"%Y%m%d"`_rapport.txt
       - 
         name: Récupération des logs
-        uses: actions/upload-artifacts@v3
+        uses: actions/upload-artifact@v3
         with:
           name: rapport.txt
           path: ./`date +"%Y%m%d"`_rapport.txt
