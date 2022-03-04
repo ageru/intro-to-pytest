@@ -59,10 +59,10 @@ jobs:
         run: pip install -r requirements.txt
       - 
         name: Lancement du test avec récupération du stdout
-        run: pytest 1> `date +"%Y%m%d"`_rapport.txt
+        run: pytest 1> rapport.txt
       - 
         name: Récupération des logs
         uses: actions/upload-artifact@v3
         with:
           name: rapport.txt
-          path: ./`date +"%Y%m%d"`_rapport.txt
+          path: ./rapport.txt
